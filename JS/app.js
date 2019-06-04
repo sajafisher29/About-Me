@@ -6,9 +6,12 @@ alert('Can you guess the correct answers about me?');
 if (playGame) {
   var kids = prompt('Do I have kids?');
   var kidsUpper = kids.toUpperCase();
-  console.log(kidsUpper, typeof kidsUpper);
+  var strKids = kidsUpper;
+  var resKids = strKids.charAt(0);
+  
+  console.log(resKids, typeof resKids);
 
-  if (kidsUpper === 'N') {
+  if (resKids === 'N') {
     alert('You are correct!');
   } else {
     alert('Nope!');
@@ -16,9 +19,11 @@ if (playGame) {
 
   var run = prompt('Do I like trail running?');
   var runUpper = run.toUpperCase();
-  console.log(runUpper, typeof runUpper);
+  var strRun = runUpper;
+  var resRun = strRun.charAt(0);
+  console.log(resRun, typeof resRun);
 
-  if (runUpper === 'YES') {
+  if (resRun === 'Y') {
     alert('You are correct! My knees don\'t agree though.');
   } else {
     alert('Nice guess but not true');
@@ -26,9 +31,11 @@ if (playGame) {
 
   var hair = prompt('Do I die my hair?');
   var hairUpper = hair.toUpperCase();
-  console.log(hairUpper, typeof hairUpper);
+  var strHair = hairUpper;
+  var resHair = strHair.charAt(0);
+  console.log(resHair, typeof resHair);
 
-  if (hairUpper === 'NO') {
+  if (hairUpper === 'N') {
     alert('You are correct!');
   } else {
     alert('Never!');
@@ -36,9 +43,11 @@ if (playGame) {
  
   var nerd = prompt('Am I a nerd?');
   var nerdUpper = nerd.toUpperCase();
-  console.log(nerdUpper, typeof nerdUpper);
+  var strNerd = nerdUpper;
+  var resNerd = strNerd.charAt(0);
+  console.log(resNerd, typeof resNerd);
 
-  if (nerdUpper === 'YES') {
+  if (resNerd === 'Y') {
     alert('A nerd and a geek!');
   } else {
     alert('Guess I have some work to do...');
@@ -46,10 +55,12 @@ if (playGame) {
 
   var legos = prompt('Do I have too many legos?');
   var legosUpper = legos.toUpperCase();
-  console.log(legosUpper, typeof legosUpper);
+  var strLegos = legosUpper;
+  var resLegos = strLegos.charAt(0);
+  console.log(resLegos, typeof resLegos);
 
   if (legosUpper === 'YES') {
-    alert('Can never have too many!');
+    alert('You can never have too many!');
   } else {
     alert('Too true.');
   }
