@@ -59,7 +59,7 @@ if (playGame) {
   var resLegos = strLegos.charAt(0);
   console.log(resLegos, typeof resLegos);
 
-  if (legosUpper === 'YES') {
+  if (legosUpper === 'Y') {
     alert('You can never have too many!');
   } else {
     alert('Too true.');
