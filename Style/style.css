@@ -1,10 +1,23 @@
 body {
-  background: aliceblue;
+  background: wheat;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
 }
 
 h1 {
   font-size: 42.5px;
   font-weight: bold;
+  color: whitesmoke;
+  background: olivedrab;
+}
+
+h2, h3 {
+  color: wheat;
+  background: olivedrab;
+}
+
+p, footer { 
+  background: olivedrab;
 }
 
 ul {
