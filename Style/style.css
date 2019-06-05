@@ -1,5 +1,5 @@
 body {
-  background: wheat;
+  background: burlywood;
   font-family: Arial, Helvetica, sans-serif;
   padding: 15px;
 }
@@ -7,22 +7,29 @@ body {
 h1 {
   font-size: 42.5px;
   font-weight: bold;
-  color: whitesmoke;
+  color: rgb(187, 219, 71);
   background: olivedrab;
 }
 
 h2, h3 {
   color: wheat;
-  background: olivedrab;
+  background: rgb(156, 89, 89);
 }
 
 p, footer { 
   background: olivedrab;
+  padding: 10px;
 }
 
 ul {
   list-style-type: disc;
   margin: 20px 40px;
+  list-style-image: url('../Images/cedar.png');
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
 }
 
 li {
