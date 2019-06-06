@@ -8,13 +8,13 @@ if (playGame) {
   var kidsUpper = kids.toUpperCase();
   var strKids = kidsUpper;
   var resKids = strKids.charAt(0);
-  
+
   console.log(resKids, typeof resKids);
 
   if (resKids === 'N') {
     alert('You are correct!');
   } else {
-    alert('Nope!');
+    alert('Nope! Although sometimes it feels like I do.');
   }
 
   var run = prompt('Do I like trail running?');
@@ -35,12 +35,12 @@ if (playGame) {
   var resHair = strHair.charAt(0);
   console.log(resHair, typeof resHair);
 
-  if (hairUpper === 'N') {
+  if (resHair === 'N') {
     alert('You are correct!');
   } else {
     alert('Never!');
   }
- 
+
   var nerd = prompt('Am I a nerd?');
   var nerdUpper = nerd.toUpperCase();
   var strNerd = nerdUpper;
@@ -59,7 +59,33 @@ if (playGame) {
   var resLegos = strLegos.charAt(0);
   console.log(resLegos, typeof resLegos);
 
-  if (legosUpper === 'Y') {
+  if (resLegos === 'Y') {
+    alert('You can never have too many!');
+  } else {
+    alert('Too true.');
+  }
+
+  var legs = prompt('What is my max rep weigh in pounds on the 45 degree leg press? Please answer with a number.');
+  console.log(legs, typeof legs);
+
+  function legs(x) {
+    if (isNaN(x)) {
+      alert('Please try with a number!');
+    } else if (legs < 710) {
+    alert('Too light!');
+    } else if (legs > 710) {
+      alert('Too heavy!');
+    } else (legs === 710) {
+      alert('That\'s right! Someday I hope to reach 1,000 pounds!');
+  }
+
+  var pets = prompt('What are the names of the family pets?');
+  var petsUpper = pets.toUpperCase();
+  var strPets = petsUpper;
+  var resPets = strPets.charAt(0);
+  console.log(resPets, typeof resPets);
+
+  if (resPets === 'Y') {
     alert('You can never have too many!');
   } else {
     alert('Too true.');
