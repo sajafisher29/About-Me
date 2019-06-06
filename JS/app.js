@@ -65,11 +65,11 @@ if (playGame) {
     alert('Too true.');
   }
 
-  var legs = prompt('What is my max rep weigh in pounds on the 45 degree leg press? Please answer with a number.');
+  alert('What is my max rep weigh in pounds on the 45 degree leg press? Please answer with a number.');
   console.log(legs, typeof legs);
 
   function legs(x) {
-    if (isNaN(x)) {
+    if (isNaN(legs)) {
       alert('Please try with a number!');
     } else if (legs < 710) {
     alert('Too light!');
@@ -91,5 +91,5 @@ if (playGame) {
     alert('Too true.');
   }
 }
-
+//check array.prototype.includes() to get a true value if the string is in the array
 console.log(playGame);
