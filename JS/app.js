@@ -1,7 +1,11 @@
 'use strict';
 
+//Alert widows pop up to start game
+
 var playGame = confirm('Do you want to play a game?');
 alert('Can you guess the correct answers about me?');
+
+//First question
 
 if (playGame) {
   var kids = prompt('Do I have kids?');
@@ -17,6 +21,8 @@ if (playGame) {
     alert('Nope! Although sometimes it feels like I do.');
   }
 
+//Second question
+
   var run = prompt('Do I like trail running?');
   var runUpper = run.toUpperCase();
   var strRun = runUpper;
@@ -28,6 +34,8 @@ if (playGame) {
   } else {
     alert('Nice guess but not true');
   }
+
+//Third question
 
   var hair = prompt('Do I die my hair?');
   var hairUpper = hair.toUpperCase();
@@ -41,6 +49,8 @@ if (playGame) {
     alert('Never!');
   }
 
+//fourth question
+
   var nerd = prompt('Am I a nerd?');
   var nerdUpper = nerd.toUpperCase();
   var strNerd = nerdUpper;
@@ -53,6 +63,8 @@ if (playGame) {
     alert('Guess I have some work to do...');
   }
 
+//fifth question
+
   var legos = prompt('Do I have too many legos?');
   var legosUpper = legos.toUpperCase();
   var strLegos = legosUpper;
@@ -64,6 +76,8 @@ if (playGame) {
   } else {
     alert('Too true.');
   }
+
+//Sixth question. Will need to use a parseInt to change the string into a number, put within the while section, use a break whenever the answer is correct or when they reach a certain score
 
   alert('What is my max rep weigh in pounds on the 45 degree leg press? Please answer with a number.');
   console.log(legs, typeof legs);
