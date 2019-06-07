@@ -143,4 +143,21 @@ if (playGame) {
   var questionsCorrect = 'You got ' + score + ' answers correct! Thanks for playing!';
   alert(questionsCorrect);
 }
+// functions 
+// question1
+function (question1) { if (playGame) {
+  var kids = prompt('Do I have kids?');
+  var kidsUpper = kids.toUpperCase();
+  var strKids = kidsUpper;
+  var resKids = strKids.charAt(0);
 
+  console.log(resKids, typeof resKids);
+
+  if (resKids === 'N') {
+    alert('You are correct!');
+    score++;
+  } else {
+    alert('Nope! Although sometimes it feels like I do.');
+  }
+
+}
