@@ -1,8 +1,12 @@
 'use strict';
+// Global variable
+var score = 0;
+
 
 //Alert widows pop up to start game
 
 var playGame = confirm('Do you want to play a game?');
+
 alert('Can you guess the correct answers about me?');
 
 //First question
@@ -17,93 +21,126 @@ if (playGame) {
 
   if (resKids === 'N') {
     alert('You are correct!');
+    score++;
   } else {
     alert('Nope! Although sometimes it feels like I do.');
   }
 
-//Second question
+  //Second question
 
   var run = prompt('Do I like trail running?');
   var runUpper = run.toUpperCase();
   var strRun = runUpper;
   var resRun = strRun.charAt(0);
+
   console.log(resRun, typeof resRun);
 
   if (resRun === 'Y') {
     alert('You are correct! My knees don\'t agree though.');
+    score++;
   } else {
     alert('Nice guess but not true');
   }
 
-//Third question
+  //Third question
 
   var hair = prompt('Do I die my hair?');
   var hairUpper = hair.toUpperCase();
   var strHair = hairUpper;
   var resHair = strHair.charAt(0);
+
   console.log(resHair, typeof resHair);
 
   if (resHair === 'N') {
     alert('You are correct!');
+    score++;
   } else {
     alert('Never!');
   }
 
-//fourth question
+  //Fourth question
 
   var nerd = prompt('Am I a nerd?');
   var nerdUpper = nerd.toUpperCase();
   var strNerd = nerdUpper;
   var resNerd = strNerd.charAt(0);
+
   console.log(resNerd, typeof resNerd);
 
   if (resNerd === 'Y') {
     alert('A nerd and a geek!');
+    score++;
   } else {
     alert('Guess I have some work to do...');
   }
 
-//fifth question
+  //Fifth question
 
   var legos = prompt('Do I have too many legos?');
   var legosUpper = legos.toUpperCase();
   var strLegos = legosUpper;
   var resLegos = strLegos.charAt(0);
+
   console.log(resLegos, typeof resLegos);
 
   if (resLegos === 'Y') {
     alert('You can never have too many!');
+    score++;
   } else {
     alert('Too true.');
   }
 
-//Sixth question. Will need to use a parseInt to change the string into a number, put within the while section, use a break whenever the answer is correct or when they reach a certain score
+  //Sixth question
 
-  alert('What is my max rep weigh in pounds on the 45 degree leg press? Please answer with a number.');
+  var legsCount = 0;
   console.log(legs, typeof legs);
 
-  function legs(x) {
-    if (isNaN(legs)) {
-      alert('Please try with a number!');
-    } else if (legs < 710) {
-    alert('Too light!');
-    } else if (legs > 710) {
-      alert('Too heavy!');
-    } else (legs === 710) {
+  while (legsCount < 4) {
+    var legs = parseInt(prompt('What is my max rep weigh in pounds on the 45 degree leg press? Please answer with a number.'));
+    if (legs === 710){
       alert('That\'s right! Someday I hope to reach 1,000 pounds!');
+      score++;
+      break;
+    }
+    else if (isNaN(legs)) {
+      legsCount++;
+      alert('Please answer with a number');
+    }
+    else if (legs < 710) {
+      legsCount++;
+      alert('Too light!');
+    }
+    else if (legs > 710) {
+      legsCount++;
+      alert('Too heavy!');
+    }
   }
 
-  var pets = prompt('What are the names of the family pets?');
-  var petsUpper = pets.toUpperCase();
-  var strPets = petsUpper;
-  var resPets = strPets.charAt(0);
-  console.log(resPets, typeof resPets);
+  //Question 7
 
-  if (resPets === 'Y') {
-    alert('You can never have too many!');
-  } else {
-    alert('Too true.');
+  var petNames = ['Bella', 'Odin', 'Tater Tot', 'Bailey', 'Caly', 'Kimber', 'Milo'];
+  var petCount = 0;
+
+  var pets = prompt('What are the names of the family pets?').toLowerCase();
+
+  while (petCount <4) {
+    var petNamesLower = [];
+    petCount++;
+    for (var i = 0; i < petNames.length; i++) {
+      petNamesLower.push(petNames[0].toLowerCase());
+    }
+    for (var j = 0; j < petNamesLower.length; j++) {
+      if (pets === petNamesLower[j]) {
+        alert('Yes, that is one of our furbabies!');
+        score++;
+        petCount = 4;
+      } else {
+        pets = prompt('Try again!').toLowerCase();
+      }
+      break;
+    }
   }
+  var questionsCorrect = 'You got ' + score + ' answers correct! Thanks for playing!';
+  alert(questionsCorrect);
 }
-//check array.prototype.includes() to get a true value if the string is in the array
-console.log(playGame);
+
