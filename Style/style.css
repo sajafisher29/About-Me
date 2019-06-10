@@ -1,33 +1,43 @@
 body {
-  background: burlywood;
+  width: 300px
+  height: 300px:
   font-family: Arial, Helvetica, sans-serif;
   padding: 15px;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  background: url('../images/trees.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.5;
 }
 
 h1 {
   font-size: 42.5px;
   font-weight: bold;
-  color: rgb(187, 219, 71);
-  background: olivedrab;
+  color: rgb(251, 255, 236);
 }
 
 h2, h3 {
-  color: wheat;
-  background: rgb(156, 89, 89);
+  color: rgb(251, 255, 236);
 }
 
 p, footer { 
-  background: olivedrab;
+  color: rgb(251, 255, 236);
   padding: 10px;
 }
 
 ul {
   list-style-type: disc;
+  color: rgb(251, 255, 236);
   margin: 20px 40px;
-  list-style-image: url('../Images/cedar.png');
 }
 
 ol {
+  color: rgb(251, 255, 236);
   list-style-type: decimal;
   list-style-position: inside;
 }
