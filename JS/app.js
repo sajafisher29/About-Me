@@ -93,8 +93,7 @@ if (playGame) {
   //Sixth question
 
   var legsCount = 0;
-  console.log(legs, typeof legs);
-
+  
   while (legsCount < 4) {
     var legs = parseInt(prompt('What is my max rep weigh in pounds on the 45 degree leg press? Please answer with a number.'));
     if (legs === 710){
@@ -115,6 +114,8 @@ if (playGame) {
       alert('Too heavy!');
     }
   }
+
+  console.log(legs, typeof legs);
 
   //Question 7
 
@@ -143,21 +144,5 @@ if (playGame) {
   var questionsCorrect = 'You got ' + score + ' answers correct! Thanks for playing!';
   alert(questionsCorrect);
 }
-// functions 
-// question1
-function (question1) { if (playGame) {
-  var kids = prompt('Do I have kids?');
-  var kidsUpper = kids.toUpperCase();
-  var strKids = kidsUpper;
-  var resKids = strKids.charAt(0);
 
-  console.log(resKids, typeof resKids);
-
-  if (resKids === 'N') {
-    alert('You are correct!');
-    score++;
-  } else {
-    alert('Nope! Although sometimes it feels like I do.');
-  }
-
-}
+console.log(pets, typeof pets);
