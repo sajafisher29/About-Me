@@ -1,4 +1,5 @@
 'use strict';
+
 // Global variable
 var score = 0;
 
@@ -26,11 +27,19 @@ alert('I hope you love where you live in ' + userLocation + '!');
 
 var playGame = confirm('Do you want to play a game?');
 
-alert('Can you guess the correct answers about me?');
 
-//First question
+//Function built for yes or no questions
 
-if (playGame) {
+function yNQuestions() {
+  var yNQuestionsArray = [q1(), q2(), q3(), q4(), q5()];
+  for (var i = 0; yNQuestionsArray.length; i++) {
+    yNQuestionsArray[i];
+  }
+}
+
+//First question asking if I have kids
+
+function q1() {
   var kids = prompt('Do I have kids?');
   var kidsUpper = kids.toUpperCase();
   var strKids = kidsUpper;
@@ -44,9 +53,11 @@ if (playGame) {
   } else {
     alert('Nope! Although sometimes it feels like I do.');
   }
+}
 
-  //Second question
+//Second question asking if I like trail running
 
+function q2() {
   var run = prompt('Do I like trail running?');
   var runUpper = run.toUpperCase();
   var strRun = runUpper;
@@ -60,9 +71,11 @@ if (playGame) {
   } else {
     alert('Nice guess but not true.');
   }
+}
 
-  //Third question
+//Third question asking if I die my hair
 
+function q3() {
   var hair = prompt('Do I die my hair?');
   var hairUpper = hair.toUpperCase();
   var strHair = hairUpper;
@@ -76,9 +89,10 @@ if (playGame) {
   } else {
     alert('Never!');
   }
+}
+//Fourth question asking if I am a nerd
 
-  //Fourth question
-
+function q4() {
   var nerd = prompt('Am I a nerd?');
   var nerdUpper = nerd.toUpperCase();
   var strNerd = nerdUpper;
@@ -92,9 +106,11 @@ if (playGame) {
   } else {
     alert('Guess I have some work to do...');
   }
+}
 
-  //Fifth question
+//Fifth question asking if I have too many legos
 
+function q5() {
   var legos = prompt('Do I have too many legos?');
   var legosUpper = legos.toUpperCase();
   var strLegos = legosUpper;
@@ -108,13 +124,15 @@ if (playGame) {
   } else {
     alert('Too true.');
   }
+}
 
-  //Sixth question
+//Sixth question asking for leg press weight with four quesses allowed
 
+function q6() {
   var legsCount = 0;
 
   while (legsCount < 4) {
-    var legs = parseInt(prompt('Alright ' +userName + ', this is a number question. What is my max rep weigh in pounds on the 45 degree leg press?'));
+    var legs = parseInt(prompt('Alright ' + userName + ', this is a number question. What is my max rep weigh in pounds on the 45 degree leg press?'));
     if (legs === 710){
       alert('That\'s right! Someday I hope to reach 1,000 pounds!');
       score++;
@@ -133,11 +151,12 @@ if (playGame) {
       alert('Too heavy!');
     }
   }
-
   console.log(legs, typeof legs);
+}
 
-  //Question 7
+//Question 7 asking user to guess family pet names
 
+function q7() {
   var petNames = ['Bella', 'Odin', 'Tate', 'Bailey', 'Caly', 'Kimber', 'Milo'];
   var petCount = 0;
 
@@ -162,9 +181,18 @@ if (playGame) {
       break;
     }
   }
-
-  var questionsCorrect = 'You got ' + score + ' answers correct! Thanks for playing!';
-  alert(questionsCorrect);
+  console.log(pets, typeof pets);
 }
 
-console.log(pets, typeof pets);
+if (playGame) {
+  alert('Can you guess the correct answers about me?');
+  //Trigger question functions
+  yNQuestions();
+  q6();
+  q7();
+}
+
+//Game score
+var questionsCorrect = 'Congratulations ' + userName + '. You got ' + score + ' answers correct! Thanks for playing and I hope you had fun!';
+
+alert(questionsCorrect);
