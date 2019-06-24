@@ -2,6 +2,23 @@
 // Global variable
 var score = 0;
 
+//Ask for the user name
+
+var userNameRequest = prompt('Hello! What is your name?');
+
+var userName = userNameRequest;
+
+console.log('What is your name?', userName);
+
+alert('Hi ' + userName + '! Thanks for visiting my page!');
+
+//Ask where they are from
+
+var location = prompt('Where are you from?');
+
+console.log(location);
+
+alert('I hope you love where you live in ' + location + '!');
 
 //Alert widows pop up to start game
 
@@ -20,7 +37,7 @@ if (playGame) {
   console.log(resKids, typeof resKids);
 
   if (resKids === 'N') {
-    alert('You are correct!');
+    alert(userName +', you are correct!');
     score++;
   } else {
     alert('Nope! Although sometimes it feels like I do.');
@@ -32,7 +49,7 @@ if (playGame) {
   var runUpper = run.toUpperCase();
   var strRun = runUpper;
   var resRun = strRun.charAt(0);
-
+  
   console.log(resRun, typeof resRun);
 
   if (resRun === 'Y') {
@@ -95,7 +112,7 @@ if (playGame) {
   var legsCount = 0;
   
   while (legsCount < 4) {
-    var legs = parseInt(prompt('What is my max rep weigh in pounds on the 45 degree leg press? Please answer with a number.'));
+    var legs = parseInt(prompt('Alright ' +userName + ', this is a number question. What is my max rep weigh in pounds on the 45 degree leg press?'));
     if (legs === 710){
       alert('That\'s right! Someday I hope to reach 1,000 pounds!');
       score++;
@@ -127,9 +144,11 @@ if (playGame) {
   while (petCount <4) {
     var petNamesLower = [];
     petCount++;
+
     for (var i = 0; i < petNames.length; i++) {
       petNamesLower.push(petNames[0].toLowerCase());
     }
+
     for (var j = 0; j < petNamesLower.length; j++) {
       if (pets === petNamesLower[j]) {
         alert('Yes, that is one of our furbabies!');
@@ -141,6 +160,7 @@ if (playGame) {
       break;
     }
   }
+
   var questionsCorrect = 'You got ' + score + ' answers correct! Thanks for playing!';
   alert(questionsCorrect);
 }
