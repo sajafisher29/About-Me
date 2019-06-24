@@ -14,11 +14,13 @@ alert('Hi ' + userName + '! Thanks for visiting my page!');
 
 //Ask where they are from
 
-var location = prompt('Where are you from?');
+var locationRequest = prompt('Where are you from?');
 
-console.log(location);
+console.log(locationRequest);
 
-alert('I hope you love where you live in ' + location + '!');
+var userLocation = locationRequest;
+
+alert('I hope you love where you live in ' + userLocation + '!');
 
 //Alert widows pop up to start game
 
@@ -49,14 +51,14 @@ if (playGame) {
   var runUpper = run.toUpperCase();
   var strRun = runUpper;
   var resRun = strRun.charAt(0);
-  
+
   console.log(resRun, typeof resRun);
 
   if (resRun === 'Y') {
     alert('You are correct! My knees don\'t agree though.');
     score++;
   } else {
-    alert('Nice guess but not true');
+    alert('Nice guess but not true.');
   }
 
   //Third question
@@ -110,7 +112,7 @@ if (playGame) {
   //Sixth question
 
   var legsCount = 0;
-  
+
   while (legsCount < 4) {
     var legs = parseInt(prompt('Alright ' +userName + ', this is a number question. What is my max rep weigh in pounds on the 45 degree leg press?'));
     if (legs === 710){
@@ -136,7 +138,7 @@ if (playGame) {
 
   //Question 7
 
-  var petNames = ['Bella', 'Odin', 'Tater Tot', 'Bailey', 'Caly', 'Kimber', 'Milo'];
+  var petNames = ['Bella', 'Odin', 'Tate', 'Bailey', 'Caly', 'Kimber', 'Milo'];
   var petCount = 0;
 
   var pets = prompt('What are the names of the family pets?').toLowerCase();
